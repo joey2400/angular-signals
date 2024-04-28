@@ -37,6 +37,7 @@
               "src/assets"
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -78,10 +79,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "angular-signals:build:production"
+              "buildTarget": "angular-signals:build:production"
             },
             "development": {
-              "browserTarget": "angular-signals:build:development"
+              "buildTarget": "angular-signals:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -89,7 +90,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-signals:build"
+            "buildTarget": "angular-signals:build"
           }
         },
         "test": {
@@ -106,6 +107,7 @@
               "src/assets"
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
             "scripts": []
