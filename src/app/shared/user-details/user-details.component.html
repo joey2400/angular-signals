@@ -1,1 +1,23 @@
-<p>user-details works!</p>
+@if(userDetail$ | async; as user ){
+<form [formGroup]="userForm" (ngSubmit)="updateUser(user.id)">
+    <div class="flex flex-col gap-2">
+        {{user.firstname}}
+        {{user.age}}
+        {{user.firstname}}
+        <mat-form-field class="mt-4" appearance="outline">
+            <mat-label>First Name</mat-label>
+            <input type="text" matInput formControlName="firstname" [value]="user.firstname">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Last Name</mat-label>
+            <input type="text" matInput formControlName="lastname" [value]="user.lasttname">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Age</mat-label>
+            <input type="number" matInput formControlName="age" [value]="user.age">
+        </mat-form-field>
+        <button mat-flat-button color="primary" type="submit">Edit User</button>
+    </div>
+
+</form>
+}
